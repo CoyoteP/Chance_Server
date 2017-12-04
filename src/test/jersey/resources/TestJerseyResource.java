@@ -34,7 +34,7 @@ public class TestJerseyResource {
 
         TestResponse res = null;
 
-        // idが一致するデータを返す
+        // idが一致するデータを返す.
         for( TestResponse tmp : set ){
 
             if(id == tmp.getId()){
