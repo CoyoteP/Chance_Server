@@ -1,4 +1,4 @@
-package test.jersey.response;
+package bean;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

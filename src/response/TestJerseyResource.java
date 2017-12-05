@@ -1,4 +1,4 @@
-package test.jersey.resources;
+package response;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -9,8 +9,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
+import bean.TestResponse;
 import net.arnx.jsonic.JSON;
-import test.jersey.response.TestResponse;
 
 @Path("/api")
 public class TestJerseyResource {
