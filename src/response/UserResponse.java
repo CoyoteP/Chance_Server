@@ -1,5 +1,6 @@
 package response;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,10 +11,12 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import bean.TestResponse;
+import bean.User;
+import dto.UserDto;
 import net.arnx.jsonic.JSON;
 
-@Path("/member")
-public class MemberResponse {
+@Path("/user")
+public class UserResponse {
 	private static Set<TestResponse> set;
 
     static{
@@ -30,18 +33,12 @@ public class MemberResponse {
     public Response TestResource(){
 
         TestResponse res = null;
-        for( TestResponse tmp : set ){
-
-                res = tmp;
-        }
-
-        // 一致無しの場合は空データを返す
-        if( res == null ){
-            res = new TestResponse(0, "");
-        }
+        UserDto uDto = new UserDto();
+        ArrayList<User> users = new ArrayList();
+        users = uDto.UserSearch();
 
         // JSONICでJSON文字列にエンコードする。
-        String json = JSON.encode(res);
+        String json = JSON.encode(users);
 
 
         return Response.ok()
@@ -54,5 +51,6 @@ public class MemberResponse {
     public String Test(@QueryParam("id") int id){
     	return "123";
     }
+
 }
 

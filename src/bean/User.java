@@ -3,16 +3,16 @@ package bean;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Member {
-	
-	private int id;
+public class User {
+
+	private String id;
     private String name;
-    
-    
-	public int getId() {
+
+
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	public String getName() {
