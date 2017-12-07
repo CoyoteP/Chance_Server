@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 import bean.User;
-public class UserDto extends Dto{
+public class MatchingDto extends Dto{
 	private final String USER_SEARCH = "SELECT id\r\n" +
 			"FROM sample.tags\r\n" +
 			"WHERE tag IN (\r\n" +
