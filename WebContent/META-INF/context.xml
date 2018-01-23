@@ -3,7 +3,7 @@
               auth="Container"
               type="javax.sql.DataSource"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://ec2-13-58-156-81.us-east-2.compute.amazonaws.com/sample?useSSL=false"
+              url="jdbc:mysql://172.31.20.142/sample?useSSL=false"
               username="user1"
               password="MysqlMaster@0" />
 </Context>
